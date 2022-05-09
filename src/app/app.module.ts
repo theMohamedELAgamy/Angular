@@ -2,22 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DepartmentComponent } from './department/department.component';
-import { StudentComponent } from './student/student.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { CoreModule } from './core/core.module';
+import { DepartmentModule } from './department/department.module';
+import { StudentModule } from './student/student.module';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DepartmentComponent,StudentComponent, HeaderComponent, FooterComponent, SidebarComponent
+    AppComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,DepartmentModule,StudentModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

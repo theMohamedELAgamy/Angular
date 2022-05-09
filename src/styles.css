@@ -1,5 +1,5 @@
 /* CSS Document */
-
+@import url(../node_modules/bootstrap/dist/css/bootstrap.css);    
 /*PAGE LAYOUT*/
 body {
     margin-left: 0px;
