@@ -1,0 +1,63 @@
+<label for="">ID:</label>
+<input type="text" [(ngModel)]="Pro.id"/>
+<label for="">name:</label>
+<input type="text" [(ngModel)]="Pro.ProductName"/>
+<label for="">price:</label>
+<input type="text" [(ngModel)]="Pro.price"/>
+<label for="">rating:</label>
+<p-rating class="rate" [(ngModel)]="Pro.rating"></p-rating>
+<label for="">date:</label>
+<p-calendar [(ngModel)]="Pro.date"></p-calendar>
+<button (click)="Add()">Add</button>
+<table class="table table-hover table-dark table-striped">
+
+    <thead>
+        <tr>
+           
+            <th>ProductName</th>
+            <th>code</th>
+            <th>date</th>
+            <th>price</th>
+            <th>rating</th>
+            <th>stars</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>    
+    <tbody>
+        <tr *ngFor="let item of products">
+            
+            <td>{{item.ProductName}}</td>
+            <td>{{item.code}}</td>
+            <td>{{item.date |date}}</td>
+            <td>${{item.price}}</td>
+            <td>{{item.rating}}</td>
+            <td><app-star [rate]="item.rating"></app-star></td>
+            <td>
+                
+                <button (click)='show(item.id)' class="btn btn-info" >Details</button>
+                <button (click)='deleteProduct(item.id)'  class="btn btn-danger" >Delete</button>
+                <button (click)='editProduct(item.id)'  class="btn btn-primary" >Edit</button>
+                
+
+            </td>
+
+        </tr>
+
+    </tbody>
+  </table>
+  <h5>ID:{{showPro.id}}<br/>,ProductName:{{showPro.ProductName}}<br/>,code:{{showPro.code}}<br/>,price:{{showPro.price}}<br/>,date:{{showPro.date |date}}<br/>,rating:{{showPro.rating}}<br/></h5>
+  <div class="edittool" *ngIf="editTool" >
+    <label for="">name:</label>
+    <input type="text" [(ngModel)]="editPro.ProductName"/>
+    <label for="">code:</label>
+    <input type="text" [(ngModel)]="editPro.code"/>
+    <label for="">price:</label>
+    <input type="text" [(ngModel)]="editPro.price"/>
+    <label for="">rating:</label>
+    <p-rating class="rate" [(ngModel)]="editPro.rating"></p-rating>
+    <label for="">date:</label>
+    <p-calendar [(ngModel)]="editPro.date"></p-calendar>
+    <button (click)="save()">save</button>
+
+</div>

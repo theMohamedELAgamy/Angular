@@ -7,17 +7,24 @@ import { DepartmentModule } from './department/department.module';
 import { StudentModule } from './student/student.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PowerToXPipe } from './power-to-x.pipe';
+import {AccordionModule} from 'primeng/accordion';   
+import {MenuItem} from 'primeng/api'; 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ProductModule } from './product/product.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PowerToXPipe
     
   ],
+  exports:[PowerToXPipe],
   imports: [
     BrowserModule,
-    CoreModule,DepartmentModule,StudentModule,FormsModule,ReactiveFormsModule
+    CoreModule,DepartmentModule,StudentModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule,AccordionModule,ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent],

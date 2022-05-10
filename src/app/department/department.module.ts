@@ -4,11 +4,13 @@ import { DepartmentComponent } from './department/department.component';
 import { FormsModule } from '@angular/forms';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { StringConvertePipe } from './string-converte.pipe';
 
 
 @NgModule({
   declarations: [
-    DepartmentComponent
+    DepartmentComponent,
+    StringConvertePipe
   ],
   imports: [
     CommonModule,ReactiveFormsModule,FormsModule

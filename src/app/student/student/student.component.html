@@ -21,9 +21,9 @@
     </thead>    
     <tbody>
         <tr *ngFor="let item of students">
-            <td>{{item.id}}</td>
+            <td>{{item.id }}</td>
             <td>{{item.name}}</td>
-            <td>{{item.age}}</td>
+            <td>{{item.age }}</td>
             <td>{{item.depNo}}</td>
             <td>
                 
@@ -52,5 +52,6 @@
     <button (click)="save()">save</button>
 
 </div>
+{{names | arraySplice:'mohamed'}}
 
       

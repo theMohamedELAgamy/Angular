@@ -6,6 +6,9 @@ import { Student } from 'src/app/_models/student';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+    public names:string []=[
+    'mohamed nabil','ahmed mohamed','nabil elsayed'
+  ] 
 
   public stu:Student=new Student(0,'',0,0);
   public showStu:Student=new Student(0,'',0,0);

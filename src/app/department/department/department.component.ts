@@ -15,10 +15,10 @@ export class DepartmentComponent implements OnInit {
 
 
   deps:Department[]=[
-    new Department(10,'it','Alexandria'),
-    new Department(11,'hr','cairo'),
-    new Department(12,'pr','helwan'),
-    new Department(13,'mn','aswan')
+    new Department(10,'it-iti','Alexandria'),
+    new Department(11,'hr-hrr','cairo'),
+    new Department(12,'pr-prr','helwan'),
+    new Department(13,'mn-mnn','aswan')
   ]
   Add(){
     this.deps.push(new Department(this.dept.id,this.dept.depName,this.dept.location))
