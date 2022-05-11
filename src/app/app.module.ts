@@ -12,19 +12,22 @@ import {AccordionModule} from 'primeng/accordion';
 import {MenuItem} from 'primeng/api'; 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ProductModule } from './product/product.module';
+import { SchoolModule } from './school/school.module';
+import { CityModule } from './city/city.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PowerToXPipe
+    PowerToXPipe,
+  
     
   ],
   exports:[PowerToXPipe],
   imports: [
     BrowserModule,
-    CoreModule,DepartmentModule,StudentModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule,AccordionModule,ProductModule
+    CoreModule,DepartmentModule,StudentModule,CityModule,SchoolModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule,AccordionModule,ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent],

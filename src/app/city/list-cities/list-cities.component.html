@@ -1,0 +1,31 @@
+<table class="table table-dark table-hover table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>numOfPeople</th>
+            <th>area Number</th>
+            <!-- <th>Action</th> -->
+        </tr>
+    </thead>    
+    <tbody>
+        <tr *ngFor="let item of cities">
+            <td>{{item.id }}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.numOfPeople }}</td>
+            <td>{{item.area}}</td>
+            <td>
+                
+                <!-- <button (click)='show(item.id)' class="btn btn-info" >Details</button>
+                <button (click)='deleteStudent(item.id)'  class="btn btn-danger" >Delete</button>
+                <button (click)='editStudent(item.id)'  class="btn btn-primary" >Edit</button>
+                 -->
+
+            </td>
+            
+
+
+        </tr>
+
+    </tbody>
+  </table>
