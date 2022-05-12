@@ -10,7 +10,7 @@ import { School } from 'src/app/_models/school';
 })
 export class ListSchoolsComponent implements OnInit {
   public editSchool:School |null=new School(0,'','',0);
-  public editedSchool :School |null =this.editSchool
+  public editedSch :School =new School(0,'','',0);
   public editTool=false
   public schools:School[]=[]
   constructor(public schoolService:SchoolService,public router:Router) {
@@ -27,12 +27,12 @@ export class ListSchoolsComponent implements OnInit {
 
   }
   editSch(id:number){
-    this.editSchool=this.schoolService.getSchool(id)
+    this.editedSch=this.schoolService.getSchool(id)
     this.editTool=true;
   }
   save(){
-      this.schoolService.saveSchool(this.editedSchool)
-      console.log(this.editedSchool)
+      this.schoolService.saveSchool(this.editedSch)
+      console.log(this.editedSch)
       this.editTool=false;
   
     }

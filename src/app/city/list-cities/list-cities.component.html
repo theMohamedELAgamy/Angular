@@ -1,11 +1,11 @@
-<table class="table table-dark table-hover table-striped">
+<br><br><br><table class="table table-dark table-hover table-striped">
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>numOfPeople</th>
             <th>area Number</th>
-            <!-- <th>Action</th> -->
+            <th>Action</th>
         </tr>
     </thead>    
     <tbody>
@@ -16,10 +16,10 @@
             <td>{{item.area}}</td>
             <td>
                 
-                <!-- <button (click)='show(item.id)' class="btn btn-info" >Details</button>
-                <button (click)='deleteStudent(item.id)'  class="btn btn-danger" >Delete</button>
-                <button (click)='editStudent(item.id)'  class="btn btn-primary" >Edit</button>
-                 -->
+                <button (click)='show(item.id)' class="btn btn-info" >Details</button>
+                <button (click)='delete(item.id)'  class="btn btn-danger" >Delete</button>
+                <button (click)='editCit(item.id)'  class="btn btn-primary" >Edit</button>
+                
 
             </td>
             
@@ -29,3 +29,16 @@
 
     </tbody>
   </table>
+  <button (click)="showAdd()">Add</button>
+  <div class="edittool" *ngIf="editTool">
+    
+    <label for="">name:</label>
+    <input type="text" [(ngModel)]="editedCity.name" />
+    <label for="">numOfPeople:</label>
+    <input type="text"  [(ngModel)]="editedCity.numOfPeople"/>
+    <label for="">numOfStudent:</label>
+    <input type="text"  [(ngModel)]="editedCity.area" />
+    
+    <button (click)="save()">save</button>
+
+</div>

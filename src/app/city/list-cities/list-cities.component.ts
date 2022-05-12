@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CityService } from 'src/app/city.service';
+import { Router } from '@angular/router';
+
 import { City } from 'src/app/_models/city';
 
 @Component({
@@ -9,11 +11,33 @@ import { City } from 'src/app/_models/city';
 })
 export class ListCitiesComponent implements OnInit {
   cities:City[]=[]
-  constructor(public cityService:CityService) { }
+  public editedCity :City =new City(0,'',0,0);
+  public editTool=false
+  constructor(public cityService:CityService,public router:Router) { }
 
   ngOnInit(): void {
     this.cities=this.cityService.listCities()
 
   }
+  showAdd(){
+    this.router.navigate(['cities/add'])
+  }
+  show(id:number){
+    this.router.navigate(['cities/',id])
+  }
+  delete(id:number){
+    this.cityService.deleteCity(id)
+ 
+   }
+   editCit(id:number){
+    this.editedCity=this.cityService.getSchool(id)
+    this.editTool=true;
+  }
+  save(){
+      this.cityService.saveSchool(this.editedCity)
+      console.log(this.editedCity)
+      this.editTool=false;
+  
+    }
 
 }

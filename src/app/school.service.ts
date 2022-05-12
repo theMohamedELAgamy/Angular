@@ -28,7 +28,7 @@ export class SchoolService {
       }
     }
     
-    return null
+    return new School(0,'','',0);
   }
   deleteSchool(id:number){
     for(let i=0;i<this.schools.length;i++){

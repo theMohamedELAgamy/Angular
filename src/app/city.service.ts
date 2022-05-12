@@ -22,4 +22,31 @@ export class CityService {
   addCity(city:City){
     this.cities.push(city)
   }
+  getSchool(id:number){
+    for(let i=0;i<this.cities.length;i++){
+      if(this.cities[i].id==id){
+        return this.cities[i]
+      }
+    }
+    
+    return new City(0,'',0,0);
+  }
+  deleteCity(id:number){
+    for(let i=0;i<this.cities.length;i++){
+      if(this.cities[i].id==id){
+        this.cities.splice(i, 1);
+        break
+      }
+    }
+
+  }
+  saveSchool(school:City |null){
+    for(let i=0;i<this.cities.length;i++){
+      if(school ?.id==this.cities[i].id){
+        this.cities[i]=school
+        break
+      }
+  
+      }
+  }
 }
