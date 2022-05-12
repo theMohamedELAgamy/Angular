@@ -14,6 +14,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ProductModule } from './product/product.module';
 import { SchoolModule } from './school/school.module';
 import { CityModule } from './city/city.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -27,7 +28,7 @@ import { CityModule } from './city/city.module';
   exports:[PowerToXPipe],
   imports: [
     BrowserModule,
-    CoreModule,DepartmentModule,StudentModule,CityModule,SchoolModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule,AccordionModule,ProductModule
+    CoreModule,DepartmentModule,StudentModule,SchoolModule,CityModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule,AccordionModule,ProductModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -16,10 +16,10 @@
             <td>{{item.numOfStudent}}</td>
             <td>
                 
-                <!-- <button (click)='show(item.id)' class="btn btn-info" >Details</button>
-                <button (click)='deleteStudent(item.id)'  class="btn btn-danger" >Delete</button>
-                <button (click)='editStudent(item.id)'  class="btn btn-primary" >Edit</button>
-                 -->
+                <button (click)='show(item.id)' class="btn btn-info" >Details</button>
+                <button (click)='deleteSch(item.id)'  class="btn btn-danger" >Delete</button>
+                <!-- <button (click)='editSch(item.id)'  class="btn btn-primary" >Edit</button> -->
+                
 
             </td>
             
@@ -29,3 +29,24 @@
 
     </tbody>
   </table>
+
+  <button (click)="showAdd()">Add</button>
+<!-- 
+
+  <div class="edittool" *ngIf="editTool">
+    <label for="">ID:</label>
+    <input type="text"  value={{editSchool?.name}}/>
+    <label for="">name:</label>
+    <input type="text" [(ngModel)]="editedSchool.name" value={{editSchool?.name}}/>
+    <label for="">city:</label>
+    <input type="text"  [(ngModel)]="editedSchool.city"value={{editSchool?.city}}/>
+    <label for="">numOfStudent:</label>
+    <input type="text"  [(ngModel)]="editedSchool.numOfStudent" value={{editSchool?.numOfStudent}}/>
+    
+    <button (click)="save()">save</button>
+
+</div> -->
+
+
+
+   

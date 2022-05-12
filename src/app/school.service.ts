@@ -27,9 +27,28 @@ export class SchoolService {
         return this.schools[i]
       }
     }
+    
     return null
+  }
+  deleteSchool(id:number){
+    for(let i=0;i<this.schools.length;i++){
+      if(this.schools[i].id==id){
+        this.schools.splice(i, 1);
+        break
+      }
+    }
 
   }
+  saveSchool(school:School |null){
+    for(let i=0;i<this.schools.length;i++){
+      if(school ?.id==this.schools[i].id){
+        this.schools[i]=school
+        break
+      }
+  
+      }
+  }
+
 
 
 }
